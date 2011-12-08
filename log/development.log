@@ -392,3 +392,13 @@ Processing RecipesController#show (for 127.0.0.1 at 2011-12-08 15:56:16) [GET]
   [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 4) [0m
 Rendering recipes/show
 Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/recipes/show/4]
+
+
+Processing RecipesController#new (for 127.0.0.1 at 2011-12-08 15:59:09) [GET]
+Rendering recipes/new
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/recipes/new/]
+
+
+Processing RecipesController#new (for 127.0.0.1 at 2011-12-08 15:59:26) [GET]
+Rendering recipes/new
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/recipes/new/]

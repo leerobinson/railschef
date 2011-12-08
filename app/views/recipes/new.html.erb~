@@ -13,8 +13,7 @@
 </p>
 
 <p>
-  <%= f.label :create %><br />
-  <%= f.
+  <%= f.submit "Create Recipe" %> | <% link_to "Go Back", recipes_path %>
 </p>
 
 <% end %>
