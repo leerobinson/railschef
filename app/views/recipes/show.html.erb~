@@ -1,0 +1,4 @@
+<h1><%=@recipe.title %></h1>
+<p>Chef: L Robinson</p>
+<p>The method for this recipe is:</p>
+<p><%=h @recipe.method %><p>
