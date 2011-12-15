@@ -13,7 +13,7 @@
 </p>
 
 <p>
-  <%= f.submit "Save Recipe" %> | <%= link_to "Go Back", recipe_path %>
+  <%= f.submit "Save Recipe" %> | <%= link_to "Return to recipe", recipe_path %>
 </p>
 
 <% end %>

@@ -1,5 +1,3 @@
-<h1>Create a new recipe</h1>
-
 <% form_for @recipe do |f| %>
 
 <p>
@@ -13,7 +11,7 @@
 </p>
 
 <p>
-  <%= f.submit "Create Recipe" %> | <%= link_to "Go Back", recipes_path %>
+  <%= f.submit "Save Recipe" %> | <%= link_to "Return to recipe", @recipe %>
 </p>
 
 <% end %>

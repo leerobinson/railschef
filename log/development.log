@@ -910,3 +910,185 @@ Processing RecipesController#index (for 127.0.0.1 at 2011-12-15 14:47:30) [GET]
   [4;35;1mRecipe Load (0.5ms)[0m   [0mSELECT * FROM "recipes" [0m
 Rendering recipes/index
 Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#new (for 127.0.0.1 at 2011-12-15 14:55:40) [GET]
+Rendering recipes/new
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/recipes/new]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2011-12-15 14:55:41) [GET]
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering recipes/index
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#new (for 127.0.0.1 at 2011-12-15 14:55:42) [GET]
+Rendering recipes/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/recipes/new]
+
+
+Processing RecipesController#create (for 127.0.0.1 at 2011-12-15 14:55:43) [POST]
+  Parameters: {"commit"=>"Create Recipe", "authenticity_token"=>"Db2gnirApuIMUNx9P7P9JDYhRznxzErPxFf0Ie2qr+Y=", "recipe"=>{"title"=>"", "method"=>""}}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2011-12-15 14:55:43) [GET]
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering recipes/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RecipesController#new (for 127.0.0.1 at 2011-12-15 14:58:27) [GET]
+Rendering recipes/new
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/recipes/new]
+
+
+Processing RecipesController#create (for 127.0.0.1 at 2011-12-15 14:58:32) [POST]
+  Parameters: {"commit"=>"Create Recipe", "authenticity_token"=>"Db2gnirApuIMUNx9P7P9JDYhRznxzErPxFf0Ie2qr+Y=", "recipe"=>{"title"=>"jhj", "method"=>""}}
+Redirected to http://localhost:3000/
+Completed in 6ms (DB: 0) | 302 Found [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2011-12-15 14:58:32) [GET]
+  [4;36;1mRecipe Load (0.4ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering recipes/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2011-12-15 14:58:33) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 4) [0m
+Rendering recipes/show
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/recipes/4]
+
+
+Processing RecipesController#new (for 127.0.0.1 at 2011-12-15 14:58:35) [GET]
+Rendering recipes/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/recipes/new]
+
+
+Processing RecipesController#create (for 127.0.0.1 at 2011-12-15 14:59:06) [POST]
+  Parameters: {"commit"=>"Create Recipe", "authenticity_token"=>"Db2gnirApuIMUNx9P7P9JDYhRznxzErPxFf0Ie2qr+Y=", "recipe"=>{"title"=>"Roast Dinner", "method"=>"Potatoes in the oven\r\nPeas and Carrots\r\nBroccoli and Cauliflower\r\nBOOM"}}
+  [4;36;1mRecipe Create (0.3ms)[0m   [0;1mINSERT INTO "recipes" ("created_at", "title", "method", "updated_at") VALUES('2011-12-15 14:59:06', 'Roast Dinner', 'Potatoes in the oven
+Peas and Carrots
+Broccoli and Cauliflower
+BOOM', '2011-12-15 14:59:06')[0m
+Redirected to http://localhost:3000/
+Completed in 98ms (DB: 0) | 302 Found [http://localhost/recipes]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2011-12-15 14:59:06) [GET]
+  [4;35;1mRecipe Load (0.4ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering recipes/index
+Completed in 45ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RecipesController#new (for 127.0.0.1 at 2011-12-15 15:30:19) [GET]
+Rendering recipes/new
+
+ActionView::TemplateError (recipe_url failed to generate from {:controller=>"recipes", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["recipes", :id] - are they all satisfied?) on line #14 of app/views/recipes/_form.html.erb:
+11: </p>
+12: 
+13: <p>
+14:   <%= f.submit "Save Recipe" %> | <%= link_to "Return to recipe", recipe_path %>
+15: </p>
+16: 
+17: <% end %>
+
+    (eval):17:in `recipe_path'
+    app/views/recipes/_form.html.erb:14
+    app/views/recipes/_form.html.erb:1
+    app/views/recipes/new.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.7ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecipesController#new (for 127.0.0.1 at 2011-12-15 15:31:14) [GET]
+Rendering recipes/new
+Rendered recipes/_form (5.9ms)
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/recipes/new]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2011-12-15 15:31:22) [GET]
+  [4;36;1mRecipe Load (0.3ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering recipes/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2011-12-15 15:31:25) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 6) [0m
+Rendering recipes/show
+Completed in 58ms (View: 7, DB: 0) | 200 OK [http://localhost/recipes/6]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2011-12-15 15:31:26) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mRecipe Load (0.1ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 6) [0m
+Rendering recipes/edit
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/recipes/6/edit]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2011-12-15 15:31:28) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mRecipe Load (0.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 6) [0m
+Rendering recipes/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/recipes/6]
+
+
+Processing RecipesController#edit (for 127.0.0.1 at 2011-12-15 15:31:50) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mRecipe Load (0.1ms)[0m   [0;1mSELECT * FROM "recipes" WHERE ("recipes"."id" = 6) [0m
+Rendering recipes/edit
+Rendered recipes/_form (3.9ms)
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/recipes/6/edit]
+
+
+Processing RecipesController#update (for 127.0.0.1 at 2011-12-15 15:31:57) [PUT]
+  Parameters: {"commit"=>"Save Recipe", "authenticity_token"=>"Db2gnirApuIMUNx9P7P9JDYhRznxzErPxFf0Ie2qr+Y=", "id"=>"6", "recipe"=>{"title"=>"Roast Dinner", "method"=>"Potatoes in the oven\r\nPeas and Carrots\r\nBroccoli and Cauliflower\r\nGravy"}}
+  [4;35;1mRecipe Load (0.2ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 6) [0m
+  [4;36;1mRecipe Update (0.1ms)[0m   [0;1mUPDATE "recipes" SET "updated_at" = '2011-12-15 15:31:57', "method" = 'Potatoes in the oven
+Peas and Carrots
+Broccoli and Cauliflower
+Gravy' WHERE "id" = 6[0m
+Redirected to http://localhost:3000/recipes/6
+Completed in 108ms (DB: 0) | 302 Found [http://localhost/recipes/6]
+
+
+Processing RecipesController#show (for 127.0.0.1 at 2011-12-15 15:31:57) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mRecipe Load (0.1ms)[0m   [0mSELECT * FROM "recipes" WHERE ("recipes"."id" = 6) [0m
+Rendering recipes/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/recipes/6]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2011-12-15 15:32:15) [GET]
+  [4;36;1mRecipe Load (0.5ms)[0m   [0;1mSELECT * FROM "recipes" [0m
+Rendering recipes/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/recipes]
+
+
+Processing RecipesController#new (for 127.0.0.1 at 2011-12-15 15:32:17) [GET]
+Rendering recipes/new
+Rendered recipes/_form (6.2ms)
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/recipes/new]
+
+
+Processing RecipesController#index (for 127.0.0.1 at 2011-12-15 15:34:25) [GET]
+  [4;35;1mRecipe Load (0.3ms)[0m   [0mSELECT * FROM "recipes" [0m
+Rendering recipes/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/recipes]
